@@ -1,0 +1,54 @@
+﻿<div ng-controller="mainController">
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            RSVP
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">RSVP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="email" required name="email" ng-model="email" placeholder="email" class="form-control" style="margin-bottom: 10px;"/>
+                    <input type="text" required name="name" ng-model="name" placeholder="name" class="form-control" style="margin-bottom: 10px;"/>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>Are you coming?</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <select name="coming" ng-model="coming" class="form-control" style="margin-bottom: 10px;">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>Number of guests</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="number" name="numberOfGuests" ng-model="numberOfGuests" placeholder="number of guests" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" ng-click="addGuests()" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
